@@ -3,7 +3,9 @@ lockfileVersion: 5.3
 specifiers:
   '@hope-ui/solid': ^0.1.2
   '@stitches/core': ^1.2.7
+  axios: ^0.26.1
   solid-app-router: ^0.3.2
+  solid-icons: ^0.3.3
   solid-js: ^1.3.13
   solid-transition-group: ^0.0.8
   vite: ^2.8.6
@@ -12,7 +14,9 @@ specifiers:
 dependencies:
   '@hope-ui/solid': 0.1.2_03983805c4afa1a0c7fba6d6c8dbbde3
   '@stitches/core': 1.2.7
+  axios: 0.26.1
   solid-app-router: 0.3.2_solid-js@1.3.13
+  solid-icons: 0.3.3_solid-js@1.3.13
   solid-js: 1.3.13
   solid-transition-group: 0.0.8_solid-js@1.3.13
 
@@ -390,6 +394,14 @@ packages:
       color-convert: 1.9.3
     dev: true
 
+  /axios/0.26.1:
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
+    dependencies:
+      follow-redirects: 1.14.9
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /babel-plugin-jsx-dom-expressions/0.32.11_@babel+core@7.17.8:
     resolution: {integrity: sha512-hytqY33SGW6B3obSLt8K5X510UwtNkTktCCWgwba+QOOV0CowDFiqeL+0ru895FLacFaYANHFTu1y76dg3GVtw==}
     dependencies:
@@ -694,6 +706,16 @@ packages:
       tabbable: 5.2.1
     dev: false
 
+  /follow-redirects/1.14.9:
+    resolution: {integrity: sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
   /fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -836,6 +858,14 @@ packages:
     resolution: {integrity: sha512-zh6Ui87xy23JUxrH0z1xAROJPpiuxa3JRx9jP2qqjr07q2EKQOjn9BrmTFvQd/azQWzLjSMU+hN2fy6kLh5Bdw==}
     peerDependencies:
       solid-js: ^1.3.5
+    dependencies:
+      solid-js: 1.3.13
+    dev: false
+
+  /solid-icons/0.3.3_solid-js@1.3.13:
+    resolution: {integrity: sha512-lZ2d83D6KIv10sXaGZcUvymlAt/mCxGYGsbfXZbRvSH7Ojb7cmS6MRlZxcSrXKY0ntGobquN9xRjWoK0hOUqQA==}
+    peerDependencies:
+      solid-js: '*'
     dependencies:
       solid-js: 1.3.13
     dev: false

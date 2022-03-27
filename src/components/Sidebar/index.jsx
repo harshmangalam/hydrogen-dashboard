@@ -1,5 +1,4 @@
 import {
-  Avatar,
   createDisclosure,
   Drawer,
   DrawerBody,
@@ -13,6 +12,7 @@ import {
   Text,
   VStack,
 } from "@hope-ui/solid";
+import { NavLink } from "solid-app-router";
 import { AiOutlineMenu } from "solid-icons/ai";
 import { FaSolidUsers } from "solid-icons/fa";
 import { FaSolidUserFriends } from "solid-icons/fa";
@@ -44,6 +44,9 @@ export default function Sidebar() {
               <For each={menus}>
                 {(menu) => (
                   <HStack
+                    as={NavLink}
+                    href={menu.href}
+                    textDecoration="none"
                     w="$full"
                     alignItems={"center"}
                     spacing="$3"
@@ -71,35 +74,42 @@ const menus = [
     name: "Users",
     icon: () => FaSolidUserFriends,
     href: "/users",
+    end: true,
   },
   {
     name: "Posts",
     icon: () => BsFilePost,
     href: "/posts",
+    end: false,
   },
   {
     name: "Groups",
     icon: () => FaSolidUsers,
     href: "/groups",
+    end: false,
   },
   {
     name: "Groups Posts",
     icon: () => BsFilePost,
     href: "/group-posts",
+    end: false,
   },
   {
     name: "Notifications",
     icon: () => IoNotificationsSharp,
     href: "/notifications",
+    end: false,
   },
   {
     name: "Login History",
     icon: () => FaSolidHistory,
     href: "/login-history",
+    end: false,
   },
   {
     name: "Messages",
     icon: () => BiSolidMessageAlt,
     href: "/messages",
+    end: false,
   },
 ];

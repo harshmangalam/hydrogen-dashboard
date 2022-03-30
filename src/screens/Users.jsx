@@ -9,6 +9,7 @@ import {
   Box,
   Image,
   Center,
+  Heading,
 } from "@hope-ui/solid";
 import { createResource, Show } from "solid-js";
 import { fetchUsers } from "../services";
@@ -16,6 +17,9 @@ export default function Users() {
   const [resource] = createResource(fetchUsers);
   return (
     <Box>
+      <Heading fontSize={"$xl"}>
+        Users
+      </Heading>
       <Switch>
         <Match when={resource.loading}>
           <Center>
@@ -32,7 +36,7 @@ export default function Users() {
           <Text>Error...</Text>
         </Match>
         <Match when={resource()}>
-          <Box overflowX={"auto"}>
+          <Box overflowX={"auto"} my={"$6"}>
             <Table overflowX={"scroll"}>
               <Thead>
                 <Tr>

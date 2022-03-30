@@ -4,7 +4,7 @@ import Sidebar from "../Sidebar";
 
 export default function Navbar() {
   return (
-    <Box as="nav" bg="$whiteAlpha12" px={"$2"}>
+    <Box as="nav" bg="white" px={"$2"} pos="fixed" top={0} w="$full">
       <Container>
         <Flex h={"$16"} alignItems={"center"}>
           <Flex gap={"$4"} alignItems="center">
